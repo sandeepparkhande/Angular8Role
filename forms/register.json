@@ -1,55 +1,84 @@
 {
-"ngxForm":[
-    {
-      "key": "input",
-      "type": "input",
-      "templateOptions": {
-        "label": "Input",
-        "placeholder": "Input placeholder",
-        "required": true
-      }
-    },
-    {
-      "key": "textarea",
-      "type": "textarea",
-      "templateOptions": {
-        "label": "Textarea",
-        "placeholder": "Textarea placeholder",
-        "required": true
-      }
-    },
-    {
-      "key": "checkbox",
-      "type": "checkbox",
-      "templateOptions": {
-        "label": "Checkbox"
-      }
-    },
-    {
-      "key": "select",
-      "type": "select",
-      "templateOptions": {
-        "label": "Select",
-        "placeholder": "Select placeholder",
-        "required": true,
-        "options": [
-          { "label": "Option 1", "value": "1" },
-          { "label": "Option 2", "value": "2" },
-          { "label": "Option 3", "value": "3" }
-        ]
-      }
-    },
-    {
-      "key": "radio",
-      "type": "radio",
-      "templateOptions": {
-        "label": "Radio",
-        "required": true,
-        "options": [
-          { "label": "Option 1", "value": "1" },
-          { "label": "Option 2", "value": "2" }
-        ]
-      }
-    }
-  ]
+    "ngxForm": [{
+            "type": "button",
+            "templateOptions": {
+                "text": "With Function",
+                "onClick": "($event) => alert('You clicked me!')"
+            }
+        },
+        {
+            "type": "button",
+            "order": "7",
+            "templateOptions": {
+                "label": "Click this guy",
+                "text": "JSON Only",
+                "btnType": "info",
+                "onClick": "($event) => {this.form.get('someInput').setValue('clicked!');}"
+            }
+        },
+        {
+            "key": "someInput",
+            "type": "input",
+            "order": "8",
+            "templateOptions": {
+                "label": "Some Input"
+            }
+        },
+        {
+            "key": "input",
+            "type": "input",
+            "order": "1",
+            "templateOptions": {
+                "label": "Input",
+                "placeholder": "Input placeholder",
+                "required": true
+            }
+        },
+        {
+            "key": "textarea",
+            "type": "textarea",
+            "order": "3",
+            "templateOptions": {
+                "label": "Textarea",
+                "placeholder": "Textarea placeholder",
+                "required": true
+            }
+        },
+        {
+            "key": "checkbox",
+            "type": "checkbox",
+            "order": "2",
+            "templateOptions": {
+                "label": "Checkbox"
+            }
+        },
+        {
+            "key": "select",
+            "type": "select",
+            "order": "4",
+            "templateOptions": {
+                "label": "Select",
+                "placeholder": "Select placeholder",
+                "required": true,
+                "options": [
+                    { "label": "Option 1", "value": "1" },
+                    { "label": "Option 2", "value": "2" },
+                    { "label": "Option 3", "value": "3" }
+                ]
+            }
+        },
+        {
+            "key": "radio",
+            "type": "radio",
+            "order": "5",
+            "templateOptions": {
+                "label": "Radio",
+                "required": true,
+                "options": [
+                    { "label": "Option 1", "value": "1" },
+                    { "label": "Option 2", "value": "2" }
+                ]
+            }
+        }
+    ]
 }
